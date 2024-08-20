@@ -3,114 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Yuan Gao's Personal Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
             margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .calculator {
-            width: 320px;
-            background-color: #fff;
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        section {
+            margin: 20px auto;
             padding: 20px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        .calculator input {
-            width: 100%;
-            height: 60px;
-            font-size: 24px;
-            text-align: right;
-            margin-bottom: 20px;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        h1, h2, h3 {
+            text-align: center;
+            color: #007BFF;
         }
-        .calculator button {
-            width: 23%;
-            height: 60px;
-            font-size: 24px;
-            margin: 5px 1%;
-            cursor: pointer;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .calculator button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
-        }
-        .calculator button.operator {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .calculator button.equal {
-            background-color: #007BFF;
-            color: white;
-        }
-        .calculator button.clear {
-            background-color: #f44336;
-            color: white;
-        }
-        .calculator button:active {
-            transform: translateY(2px);
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        ul li {
+            padding: 5px 0;
         }
     </style>
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-        <br>
-        <button onclick="clearDisplay()" class="clear">C</button>
-        <button onclick="appendNumber('7')">7</button>
-        <button onclick="appendNumber('8')">8</button>
-        <button onclick="appendNumber('9')">9</button>
-        <button onclick="appendOperator('+')" class="operator">+</button>
-        <br>
-        <button onclick="appendNumber('4')">4</button>
-        <button onclick="appendNumber('5')">5</button>
-        <button onclick="appendNumber('6')">6</button>
-        <button onclick="appendOperator('-')" class="operator">-</button>
-        <br>
-        <button onclick="appendNumber('1')">1</button>
-        <button onclick="appendNumber('2')">2</button>
-        <button onclick="appendNumber('3')">3</button>
-        <button onclick="appendOperator('*')" class="operator">*</button>
-        <br>
-        <button onclick="appendNumber('0')">0</button>
-        <button onclick="appendOperator('.')" class="operator">.</button>
-        <button onclick="calculateResult()" class="equal">=</button>
-        <button onclick="appendOperator('/')" class="operator">/</button>
-    </div>
-
-    <script>
-        function appendNumber(number) {
-            document.getElementById('display').value += number;
-        }
-
-        function appendOperator(operator) {
-            document.getElementById('display').value += operator;
-        }
-
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
-
-        function calculateResult() {
-            try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
-            }
-        }
-    </script>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Personal Site of Yuan Gao</p>
+    </header>
+    
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Yuan Gao, a student at UCLA pursuing a major in Data Theory. I'm passionate about AI, mathematics, and front-end development. Welcome to my personal site!</p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li><a href="https://github.com/Yhilosoghy/Project1">Project 1</a> - A brief description of what it does.</li>
+            <li><a href="https://github.com/Yhilosoghy/Project2">Project 2</a> - A brief description of what it does.</li>
+        </ul>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <article>
+            <h3><a href="#">Understanding AI: The Basics</a></h3>
+            <p>A brief introduction to AI concepts and why they're important...</p>
+        </article>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript (React, Node.js)</li>
+            <li>HTML & CSS</li>
+            <li>Git & GitHub</li>
+            <li>Data Analysis (Pandas, NumPy)</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at <a href="mailto:yuangaodata@gmail.com">yuangaodata@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Yuan Gao. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/Yhilosoghy" style="color: white;">GitHub</a> | 
+            <a href="https://twitter.com/yourhandle" style="color: white;">Twitter</a> | 
+            <a href="https://www.linkedin.com/in/yourprofile" style="color: white;">LinkedIn</a>
+        </p>
+    </footer>
 </body>
 </html>
