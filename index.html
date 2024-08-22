@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuan Gao's Personal Website</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -21,20 +23,31 @@
         }
         nav {
             margin: 10px 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #007BFF;
+            padding: 10px 0;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #007BFF;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffdf00;
         }
         section {
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
             background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+        }
+        section:nth-child(even) {
+            background-color: #f9f9f9;
         }
         h1, h2, h3 {
             text-align: center;
@@ -52,6 +65,22 @@
             margin: 20px auto;
             max-width: 100%;
             border-radius: 8px;
+            border: 2px solid #007BFF;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffdf00;
+        }
+        footer a::before {
+            content: "🔗 ";
         }
     </style>
 </head>
@@ -71,7 +100,6 @@
     
     <section id="about-me">
         <h2>About Me</h2>
-        <!-- Image Inserted Here -->
         <img src="YG.jpg" alt="Yuan Gao's Photo" width="300">
         <p>I am a Data Theory major at UCLA with a strong foundation in mathematics and basic programming skills, complemented by extensive experience in the music industry as a professional drummer and rocker. My career has been a blend of artistic expression and technical precision, and I am now channeling this unique combination towards a future in data science and artificial intelligence. I thrive in environments where creativity meets logic.</p>
     </section>
@@ -116,9 +144,9 @@
     <footer>
         <p>&copy; 2024 Yuan Gao. All rights reserved.</p>
         <p>
-            <a href="https://github.com/Yhilosoghy" style="color: white;">GitHub</a> | 
-            <a href="https://twitter.com/yourhandle" style="color: white;">Twitter</a> | 
-            <a href="https://www.linkedin.com/in/yuangaodata/" style="color: white;">LinkedIn</a>
+            <a href="https://github.com/Yhilosoghy">GitHub</a> | 
+            <a href="https://twitter.com/yourhandle">Twitter</a> | 
+            <a href="https://www.linkedin.com/in/yuangaodata/">LinkedIn</a>
         </p>
     </footer>
 </body>
